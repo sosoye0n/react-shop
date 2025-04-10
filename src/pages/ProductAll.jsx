@@ -10,7 +10,7 @@ const ProductAll = () => {
 
   const getProducts = async () => {
     let searchQuery = query.get("q") || ""; // q라는 키값을 가진 쿼리 찾아서 넣어라
-    const url = `http://localhost:3000/products?q=${searchQuery}`;// q=${} 문법임
+    const url = `https://my-json-server.typicode.com/sosoye0n/React-shop/products?q=${searchQuery}`; // q=${} 문법임
     const response = await fetch(url);
     const data = await response.json();
     setProductList(data);
